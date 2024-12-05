@@ -22,9 +22,23 @@ class Day1Test {
     }
 
     @Test
+    void twoTest() {
+        var t = new Day1();
+        var res = t.two(testInput);
+        assertEquals(31, res);
+    }
+
+    @Test
     void one() {
         var t = new Day1();
         var res = t.one(input);
+        System.out.println(res);
+    }
+
+    @Test
+    void two() {
+        var t = new Day1();
+        var res = t.two(input);
         System.out.println(res);
     }
 

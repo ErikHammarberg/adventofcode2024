@@ -23,9 +23,15 @@ public class Day1 {
 
     long two(String args) {
         var lines = args.split("\n");
-        var right = Arrays.stream(lines).map(l -> l.split("\\s+")[1])
+        var counter = new CounterMap();
+        Arrays.stream(lines).map(l -> l.split("\\s+")[1])
                 .map(Integer::parseInt)
-                .map()
+                .forEach(l -> counter.addNumber(l));
+
+        return Arrays.stream(lines).map(l -> l.split("\\s+")[0])
+                .mapToInt(Integer::parseInt)
+                .map(l -> counter.keepr.getOrDefault(l, 0)* l)
+                .sum();
 
 
 
