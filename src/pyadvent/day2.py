@@ -31,6 +31,12 @@ def one(filename):
 def not_valid(before, current, increasing):
     return (current < before) == increasing or current == before or abs(current - before) > 3
 
+def valid(before, current, increasing):
+    return not not_valid(before, current, increasing)
+
+def is_increasing(first, second, array):
+
+
 def two(filename):
     file = open(filename, 'r')
     lines = file.readlines()
